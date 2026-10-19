@@ -618,6 +618,40 @@ p { margin: 0; }
 }
 .form-error.visible { display: block; }
 
+.trampa { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.formulario { position: relative; }
+.formulario.enviando .boton { opacity: .6; pointer-events: none; }
+
+.form-exito {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 44px;
+  text-align: center;
+  background: var(--blanco);
+  border-top: 4px solid var(--oro);
+  animation: subir .6s var(--curva);
+}
+.form-exito[hidden] { display: none; }
+.form-exito:focus { outline: none; }
+.form-exito p { max-width: 380px; color: var(--texto-suave); }
+.form-exito button { border: 0; background: none; color: var(--oro-oscuro); cursor: pointer; margin-top: 8px; font-family: inherit; }
+.form-exito-icono {
+  width: 64px; height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--negro-2);
+  color: var(--oro);
+  font-size: 30px;
+}
+
 .form-acciones {
   display: flex;
   flex-wrap: wrap;

@@ -441,11 +441,21 @@
 
         <label class="autorizacion"><input type="checkbox" name="autorizacion" required>Autorizo el tratamiento de mis datos personales para atender esta solicitud, conforme a la Ley 1581 de 2012.</label>
 
+        <!-- campo trampa contra robots: las personas no lo ven -->
+        <input type="text" name="_honey" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
+
         <p class="form-error" id="form-error" role="alert"></p>
 
         <div class="form-acciones">
-          <button type="submit" class="boton boton-negro">Enviar solicitud</button>
+          <button type="submit" class="boton boton-negro" id="form-enviar">Enviar solicitud</button>
           <a href="https://wa.me/573052778792">o escríbanos por WhatsApp →</a>
+        </div>
+
+        <div class="form-exito" id="form-exito" role="status" tabindex="-1" hidden>
+          <span class="form-exito-icono" aria-hidden="true">✓</span>
+          <h3>Solicitud recibida</h3>
+          <p>Gracias. Un contador de la firma le responderá en máximo un día hábil por el medio que eligió.</p>
+          <button type="button" class="enlace-flecha" id="form-otra">Enviar otra solicitud <span>→</span></button>
         </div>
       </form>
     </div>

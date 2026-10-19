@@ -55,10 +55,27 @@
     revelables.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* ---------- Formulario de consulta: arma un correo ---------- */
+  /* ---------- Formulario de consulta: envía la solicitud al correo de la firma ----------
+     Usa FormSubmit (formsubmit.co), servicio gratuito que reenvía el formulario por correo.
+     La primera vez llega a la bandeja un correo de activación que hay que confirmar. */
+  var DESTINO = 'https://formsubmit.co/ajax/jjcontadores_asociados@hotmail.com';
   var form = document.getElementById('consulta');
   var error = document.getElementById('form-error');
+  var exito = document.getElementById('form-exito');
+  var enviar = document.getElementById('form-enviar');
+
+  function mostrarError(texto, campo) {
+    error.textContent = texto;
+    error.classList.add('visible');
+    if (campo) campo.focus();
+  }
+
   if (form) {
+    document.getElementById('form-otra').addEventListener('click', function () {
+      form.reset();
+      exito.hidden = true;
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var faltan = Array.prototype.filter.call(
@@ -75,21 +92,43 @@
       } else if (!form.autorizacion.checked) {
         mensaje = 'Debe autorizar el tratamiento de datos para enviar la solicitud.';
       }
-      if (mensaje) {
-        error.textContent = mensaje;
-        error.classList.add('visible');
-        if (faltan[0]) faltan[0].focus();
-        return;
-      }
+      if (mensaje) return mostrarError(mensaje, faltan[0]);
       error.classList.remove('visible');
 
-      var lineas = [];
+      var datos = {};
       new FormData(form).forEach(function (valor, nombre) {
-        if (nombre === 'autorizacion' || !String(valor).trim()) return;
-        lineas.push((nombre === 'tipo' ? 'Tipo de cliente' : nombre) + ': ' + valor);
+        if (nombre === 'autorizacion' || nombre === '_honey') return;
+        if (!String(valor).trim()) return;
+        datos[nombre === 'tipo' ? 'Tipo de cliente' : nombre] = valor;
       });
-      location.href = 'mailto:jjcontadores_asociados@hotmail.com?subject=' +
-        encodeURIComponent('Solicitud de consulta') + '&body=' + encodeURIComponent(lineas.join('\n'));
+      datos['Autorización de datos'] = 'Sí (Ley 1581 de 2012)';
+      datos._subject = 'Nueva solicitud de consulta — ' + (datos['Nombre o razón social'] || 'sitio web');
+      datos._replyto = correo.value;
+      datos._template = 'table';
+      datos._captcha = 'false';
+      datos._honey = form._honey.value;
+
+      form.classList.add('enviando');
+      enviar.textContent = 'Enviando…';
+
+      fetch(DESTINO, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(datos)
+      })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, json: j }; }); })
+        .then(function (res) {
+          if (!res.ok || String(res.json.success) !== 'true') throw new Error(res.json.message || 'Error');
+          exito.hidden = false;
+          exito.focus();
+        })
+        .catch(function () {
+          mostrarError('No pudimos enviar la solicitud. Intente de nuevo o escríbanos por WhatsApp al 305 277 8792.');
+        })
+        .then(function () {
+          form.classList.remove('enviando');
+          enviar.textContent = 'Enviar solicitud';
+        });
     });
   }
 })();
