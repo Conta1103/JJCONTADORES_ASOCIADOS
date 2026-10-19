@@ -76,6 +76,12 @@
       exito.hidden = true;
     });
 
+    // Regreso desde FormSubmit tras un envío tradicional
+    if (/[?&]enviado=1/.test(location.search)) {
+      exito.hidden = false;
+      history.replaceState(null, '', location.pathname + '#contacto');
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var faltan = Array.prototype.filter.call(
@@ -95,40 +101,46 @@
       if (mensaje) return mostrarError(mensaje, faltan[0]);
       error.classList.remove('visible');
 
+      // opciones que FormSubmit también lee en el envío tradicional
+      form._subject.value = 'Nueva solicitud de consulta — ' + form['Nombre o razón social'].value.trim();
+      form._replyto.value = correo.value;
+
       var datos = {};
       new FormData(form).forEach(function (valor, nombre) {
-        if (nombre === 'autorizacion' || nombre === '_honey') return;
+        if (nombre === 'autorizacion' || nombre.charAt(0) === '_') return;
         if (!String(valor).trim()) return;
         datos[nombre === 'tipo' ? 'Tipo de cliente' : nombre] = valor;
       });
       datos['Autorización de datos'] = 'Sí (Ley 1581 de 2012)';
-      datos._subject = 'Nueva solicitud de consulta — ' + (datos['Nombre o razón social'] || 'sitio web');
-      datos._replyto = correo.value;
-      datos._template = 'table';
-      datos._captcha = 'false';
-      datos._honey = form._honey.value;
+      ['_subject', '_replyto', '_template', '_captcha', '_honey'].forEach(function (n) { datos[n] = form[n].value; });
 
       form.classList.add('enviando');
       enviar.textContent = 'Enviando…';
+
+      function terminar() {
+        form.classList.remove('enviando');
+        enviar.textContent = 'Enviar solicitud';
+      }
 
       fetch(DESTINO, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(datos)
-      })
-        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, json: j }; }); })
-        .then(function (res) {
-          if (!res.ok || String(res.json.success) !== 'true') throw new Error(res.json.message || 'Error');
-          exito.hidden = false;
-          exito.focus();
-        })
-        .catch(function () {
-          mostrarError('No pudimos enviar la solicitud. Intente de nuevo o escríbanos por WhatsApp al 305 277 8792.');
-        })
-        .then(function () {
-          form.classList.remove('enviando');
-          enviar.textContent = 'Enviar solicitud';
+      }).then(function (r) {
+        return r.json().then(function (j) {
+          terminar();
+          if (r.ok && String(j.success) === 'true') {
+            exito.hidden = false;
+            exito.focus();
+          } else {
+            mostrarError('No pudimos enviar la solicitud. Intente de nuevo o escríbanos por WhatsApp al 305 277 8792.');
+          }
         });
+      }).catch(function () {
+        // El navegador bloqueó el envío directo (bloqueador, red, etc.):
+        // se envía el formulario de forma tradicional y FormSubmit regresa a ?enviado=1
+        HTMLFormElement.prototype.submit.call(form);
+      });
     });
   }
 })();

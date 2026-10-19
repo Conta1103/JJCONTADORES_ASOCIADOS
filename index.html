@@ -79,8 +79,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/mascota.css">
+<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/mascota.css?v=3">
 </head>
 <body>
 
@@ -403,7 +403,13 @@
         </ol>
       </div>
 
-      <form id="consulta" class="formulario revelar" aria-label="Solicitud de consulta" novalidate>
+      <form id="consulta" class="formulario revelar" aria-label="Solicitud de consulta" action="https://formsubmit.co/jjcontadores_asociados@hotmail.com" method="POST" novalidate>
+        <!-- opciones de FormSubmit (se usan si el envío directo falla y el formulario se envía de forma normal) -->
+        <input type="hidden" name="_subject" value="Nueva solicitud de consulta — sitio web">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_replyto" value="">
+        <input type="hidden" name="_next" value="https://jjcontadoresasociados.com/?enviado=1#contacto">
         <div>
           <h3>Solicitud de consulta</h3>
           <p>Los campos marcados con * son obligatorios.</p>
@@ -470,7 +476,7 @@
   </div>
 </footer>
 
-<script src="js/main.js" defer></script>
-<script src="js/mascota.js" defer></script>
+<script src="js/main.js?v=3" defer></script>
+<script src="js/mascota.js?v=3" defer></script>
 </body>
 </html>
