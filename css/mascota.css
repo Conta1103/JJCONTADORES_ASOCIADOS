@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Jota — personaje animado de la portada
+   Las coordenadas de transform-origin están en unidades del viewBox del SVG.
+   ========================================================================== */
+
+.escenario {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1.08;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  animation: escenario-entra 1s .3s var(--curva) forwards;
+  will-change: transform;
+}
+@keyframes escenario-entra {
+  from { opacity: 0; transform: translateY(30px) scale(.96); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Aros decorativos detrás del personaje */
+.aro {
+  position: absolute;
+  left: 50%; top: 46%;
+  width: 78%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, rgba(201, 168, 92, .22), rgba(201, 168, 92, .04) 60%, transparent 72%);
+  border: 1px solid rgba(201, 168, 92, .35);
+}
+.aro-giratorio {
+  position: absolute;
+  left: 50%; top: 46%;
+  width: 92%;
+  transform: translate(-50%, -50%);
+  overflow: visible;
+}
+.aro-giratorio circle {
+  fill: none;
+  stroke: var(--oro);
+  stroke-width: 1;
+  stroke-dasharray: 2 10;
+  opacity: .5;
+  transform-origin: 200px 200px;
+  animation: girar 60s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+
+/* Símbolos que flotan alrededor */
+.simbolo {
+  position: absolute;
+  font-family: var(--fuente-titulo);
+  color: var(--oro);
+  opacity: .0;
+  pointer-events: none;
+  user-select: none;
+  animation: flotar 7s ease-in-out infinite, aparecer 1s ease forwards;
+}
+.s1 { left: 6%;  top: 18%; font-size: 40px; animation-delay: 0s, .8s; }
+.s2 { right: 4%; top: 30%; font-size: 34px; animation-delay: -2s, 1s; }
+.s3 { left: 0;   top: 56%; font-size: 15px; letter-spacing: .2em; animation-delay: -4s, 1.2s; }
+.s4 { right: 12%; top: 6%; font-size: 26px; animation-delay: -1s, 1.4s; }
+.s5 { left: 18%; top: 2%;  font-size: 22px; animation-delay: -3s, 1.6s; }
+.s6 { right: 0;  top: 62%; font-size: 14px; letter-spacing: .2em; animation-delay: -5s, 1.8s; }
+@keyframes aparecer { to { opacity: .55; } }
+@keyframes flotar {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-14px) rotate(6deg); }
+}
+
+/* Globo de diálogo */
+.globo {
+  position: absolute;
+  left: -4%;
+  top: 4%;
+  z-index: 3;
+  max-width: 230px;
+  padding: 14px 18px;
+  background: var(--blanco);
+  color: var(--texto);
+  font-size: 16px;
+  line-height: 1.35;
+  border-radius: 14px 14px 14px 2px;
+  box-shadow: 0 18px 40px -16px rgba(0, 0, 0, .7);
+  transform-origin: 10% 100%;
+  opacity: 0;
+  animation: globo-entra .6s 1.6s var(--curva) forwards;
+}
+.globo::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: -10px;
+  border: 10px solid transparent;
+  border-top-color: var(--blanco);
+  border-bottom: 0;
+  border-left-width: 0;
+}
+.globo b { color: var(--oro-oscuro); font-weight: 700; }
+.globo.listo { opacity: 1; animation: none; }
+.globo.listo.cambiando { animation: globo-cambia .45s var(--curva); }
+@keyframes globo-entra {
+  from { opacity: 0; transform: scale(.6) translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes globo-cambia {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(.92); }
+  100% { transform: scale(1); }
+}
+
+/* Botón que envuelve al personaje */
+.jota {
+  position: relative;
+  z-index: 2;
+  width: 82%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.jota:focus-visible { outline: 2px dashed var(--oro); outline-offset: 6px; border-radius: 12px; }
+.jota svg { width: 100%; height: auto; overflow: visible; }
+
+/* ---- Animaciones del personaje ---- */
+.jota-sombra { fill: rgba(0, 0, 0, .55); transform-origin: 200px 462px; animation: sombra 4s ease-in-out infinite; }
+.jota-cuerpo { transform-origin: 200px 395px; animation: respirar 4s ease-in-out infinite; }
+.jota-cabeza { transform-origin: 200px 240px; animation: cabecear 6s ease-in-out infinite; }
+.jota-brazo-saludo { transform-origin: 256px 280px; }
+.jota-calculadora { transform-origin: 173px 342px; }
+.jota-cejas { transform-origin: 200px 138px; transition: transform .3s var(--curva); }
+.jota-ojos { transform-origin: 200px 178px; }
+.jota-pupila { transition: transform .12s linear; }
+.jota-boca-abierta { opacity: 0; }
+
+@keyframes respirar {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  50%      { transform: translateY(-4px) scaleY(1.012); }
+}
+@keyframes sombra {
+  0%, 100% { transform: scaleX(1); opacity: 1; }
+  50%      { transform: scaleX(.94); opacity: .8; }
+}
+@keyframes cabecear {
+  0%, 100% { transform: rotate(0deg); }
+  30%      { transform: rotate(-3deg); }
+  70%      { transform: rotate(2.5deg); }
+}
+
+/* Saludo: se activa con la clase .saludando */
+.jota.saludando .jota-brazo-saludo { animation: saludar 1.4s ease-in-out; }
+@keyframes saludar {
+  0%, 100% { transform: rotate(0deg); }
+  15%  { transform: rotate(-16deg); }
+  30%  { transform: rotate(12deg); }
+  45%  { transform: rotate(-16deg); }
+  60%  { transform: rotate(12deg); }
+  75%  { transform: rotate(-8deg); }
+}
+
+/* Parpadeo: clase .parpadeando */
+.jota.parpadeando .jota-ojos { animation: parpadear .18s ease-in-out; }
+@keyframes parpadear {
+  0%, 100% { transform: scaleY(1); }
+  50%      { transform: scaleY(.08); }
+}
+
+/* Salto al hacer clic: clase .saltando */
+.jota.saltando svg { animation: saltar .6s var(--curva); }
+.jota.saltando .jota-boca-abierta { opacity: 1; }
+.jota.saltando .jota-sonrisa { opacity: 0; }
+.jota.saltando .jota-cejas { transform: translateY(-7px); }
+.jota.saltando .jota-calculadora { animation: calculadora .6s var(--curva); }
+@keyframes saltar {
+  0%   { transform: translateY(0) scale(1, 1); }
+  20%  { transform: translateY(4px) scale(1.04, .95); }
+  50%  { transform: translateY(-26px) scale(.98, 1.03); }
+  80%  { transform: translateY(0) scale(1.03, .97); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
+@keyframes calculadora {
+  50% { transform: rotate(-10deg) translateY(-6px); }
+}
+
+/* Curiosidad: cejas arriba al pasar el mouse */
+.jota:hover .jota-cejas { transform: translateY(-5px); }
+
+/* ---- Responsive ---- */
+@media (max-width: 980px) {
+  .escenario { max-width: 400px; }
+}
+@media (max-width: 640px) {
+  .escenario { max-width: 330px; }
+  .globo { font-size: 14px; max-width: 180px; padding: 10px 14px; left: -2%; }
+  .s3, .s6 { display: none; }
+}
+
+/* ---- Movimiento reducido: el personaje queda quieto ---- */
+@media (prefers-reduced-motion: reduce) {
+  .escenario, .globo, .simbolo { opacity: 1; animation: none; }
+  .simbolo { opacity: .55; }
+  .jota-cuerpo, .jota-cabeza, .jota-sombra, .aro-giratorio circle { animation: none; }
+}

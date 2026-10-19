@@ -8,6 +8,7 @@
 <meta name="keywords" content="contadores públicos Colombia, asesoría tributaria, contabilidad, nómina, seguridad social, declaración de renta, impuestos Colombia, información exógena, cobro coactivo, DIAN, estatuto tributario">
 <meta name="author" content="JJ Contadores & Asociados">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0E0E0E">
 <link rel="canonical" href="https://jjcontadoresasociados.com/">
 
 <!-- Open Graph / Facebook -->
@@ -75,272 +76,391 @@
 }
 </script>
 <link rel="icon" href="assets/jj-negro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap">
-<style>
-body{margin:0;background:#FFFFFF}
-a{color:#8A6A2B}a:hover{color:#5E4719}
-</style>
-<style>html{scroll-behavior:smooth}*{box-sizing:border-box}</style>
-<style>
-@media (max-width:640px){
-  #inicio>div{padding:72px 16px 64px!important;grid-template-columns:1fr!important;gap:40px!important}
-  #inicio h1{font-size:40px!important}
-  #inicio>div>div:last-child>div{width:100%!important;max-width:340px;height:auto!important;aspect-ratio:380/420}
-  #inicio img{width:60%!important}
-  header>div,footer>div,section[aria-label]>div{padding-left:16px!important;padding-right:16px!important}
-  #servicios>div,#herramientas>div,#boletin>div,#contacto>div{padding:72px 16px!important}
-  h2{font-size:36px!important}
-  #servicios [style*="minmax(320px"],#herramientas [style*="minmax(340px"],#boletin [style*="minmax(300px"]{grid-template-columns:1fr!important}
-  #servicios article{padding-right:0!important}
-  #herramientas article{padding:28px!important}
-  #herramientas h3{font-size:30px!important}
-  #contacto form{padding:28px 20px!important;flex-basis:100%!important}
-  #contacto>div>div{flex-basis:100%!important}
-  nav{gap:16px!important}
-}
-</style>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/mascota.css">
 </head>
 <body>
 
-<div style="width: 100%; background: #FFFFFF; color: #141414; font-family: 'EB Garamond', Georgia, serif; font-size: 18px; line-height: 1.6">
+<header class="encabezado">
+  <div class="contenedor">
+    <a href="#inicio" class="marca">
+      <img src="assets/jj-negro.png" alt="">
+      <span class="marca-nombre">JJ Contadores <em>&amp; Asociados</em></span>
+    </a>
+    <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <nav id="menu" class="menu" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#boletin">Boletín</a>
+      <a href="#contacto" class="boton boton-negro">Agendar consulta</a>
+    </nav>
+  </div>
+</header>
 
-  <header style="border-bottom: 1px solid #E6E1D6; background: #FFFFFF">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-      <a href="#inicio" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #141414">
-        <img src="assets/jj-negro.png" alt="" style="height: 44px; width: auto">
-        <span style="font-family: 'Cinzel', Georgia, serif; font-size: 24px; font-weight: 600; letter-spacing: 0.01em">JJ Contadores <span style="color: #8A6A2B; font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-weight: 400">&amp; Asociados</span></span>
-      </a>
-      <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase">
-        <a href="#servicios" style="color: #141414; text-decoration: none">Servicios</a>
-        <a href="#herramientas" style="color: #141414; text-decoration: none">Herramientas</a>
-        <a href="#boletin" style="color: #141414; text-decoration: none">Boletín</a>
-                <a href="#contacto" style="background: #141414; color: #FFFFFF; text-decoration: none; padding: 12px 22px; border-radius: 2px">Agendar consulta</a>
-      </nav>
-    </div>
-  </header>
+<main>
 
-  <section id="inicio" style="background: #0E0E0E; color: #FFFFFF">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 112px 32px 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px; align-items: center">
-      <div style="display: flex; flex-direction: column; gap: 28px">
-        <h1 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 500; font-size: 60px; line-height: 1.1; letter-spacing: 0.01em">Rigor tributario,<br><em style="color: #C9A85C; font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-weight: 400">criterio contable.</em></h1>
-        <p style="margin: 0; max-width: 520px; font-size: 18px; color: #CFCAC0">Asesoría contable, tributaria y financiera para personas naturales, empresas y entidades públicas, respaldada por la norma vigente y la jurisprudencia del Consejo de Estado.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 14px">
-          <a href="#contacto" style="background: #C9A85C; color: #0E0E0E; text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 30px; border-radius: 2px">Solicitar consulta</a>
-          <a href="#servicios" style="border: 1px solid #5A5446; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 30px; border-radius: 2px">Ver servicios</a>
+  <!-- ============ Portada con Jota, el personaje animado ============ -->
+  <section id="inicio" class="hero">
+    <div class="contenedor">
+      <div class="hero-texto">
+        <span class="etiqueta" style="color: var(--oro)">Contadores públicos · Colombia</span>
+        <h1>Rigor tributario,<br><em>criterio contable.</em></h1>
+        <p>Asesoría contable, tributaria y financiera para personas naturales, empresas y entidades públicas, respaldada por la norma vigente y la jurisprudencia del Consejo de Estado.</p>
+        <div class="hero-acciones">
+          <a href="#contacto" class="boton boton-oro">Solicitar consulta</a>
+          <a href="#servicios" class="boton boton-linea">Ver servicios</a>
+        </div>
+        <div class="hero-sellos">
+          <span>Respuesta en un día hábil</span>
+          <span>Doctrina DIAN al día</span>
+          <span>Boletín cada lunes</span>
         </div>
       </div>
-      <div style="display: flex; justify-content: center">
-        <div style="width: 380px; height: 420px; border: 1px solid #C9A85C; padding: 18px; box-sizing: border-box; display: flex">
-          <div style="flex: 1; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
-            <img src="assets/jj-logo.png" alt="Logo JJ Contadores &amp; Asociados" style="width: 240px; height: auto">
-          </div>
-        </div>
+
+      <div class="escenario" id="escenario">
+        <div class="aro" aria-hidden="true"></div>
+        <svg class="aro-giratorio" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="190"/></svg>
+
+        <span class="simbolo s1" aria-hidden="true">$</span>
+        <span class="simbolo s2" aria-hidden="true">%</span>
+        <span class="simbolo s3" aria-hidden="true">UVT</span>
+        <span class="simbolo s4" aria-hidden="true">§</span>
+        <span class="simbolo s5" aria-hidden="true">∑</span>
+        <span class="simbolo s6" aria-hidden="true">E.A.</span>
+
+        <div class="globo" id="globo" role="status" aria-live="polite">¡Hola! Soy <b>Jota</b>, su contador de confianza.</div>
+
+        <button class="jota" id="jota" type="button" aria-label="Jota, la mascota de JJ Contadores. Pulse para ver otro dato tributario.">
+          <svg viewBox="0 0 400 480" aria-hidden="true" focusable="false">
+            <!-- sombra en el piso -->
+            <ellipse class="jota-sombra" cx="200" cy="462" rx="120" ry="12"/>
+
+            <!-- libros: Estatuto Tributario -->
+            <g class="jota-libros">
+              <rect x="104" y="420" width="192" height="32" rx="3" fill="#8A6A2B"/>
+              <rect x="110" y="424" width="180" height="4" fill="#E4CF9A" opacity=".55"/>
+              <rect x="110" y="432" width="180" height="2" fill="#E4CF9A" opacity=".35"/>
+              <rect x="110" y="438" width="180" height="2" fill="#E4CF9A" opacity=".35"/>
+              <rect x="122" y="394" width="156" height="28" rx="3" fill="#1C1A16" stroke="#3A352B"/>
+              <rect x="122" y="394" width="14" height="28" fill="#C9A85C"/>
+              <text x="210" y="413" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-size="12" letter-spacing="2" fill="#C9A85C">ESTATUTO</text>
+            </g>
+
+            <g class="jota-cuerpo">
+              <!-- piernas y zapatos -->
+              <rect x="170" y="340" width="24" height="52" rx="8" fill="#1E1C18"/>
+              <rect x="206" y="340" width="24" height="52" rx="8" fill="#1E1C18"/>
+              <ellipse cx="178" cy="393" rx="21" ry="9" fill="#050505"/>
+              <ellipse cx="224" cy="393" rx="21" ry="9" fill="#050505"/>
+
+              <!-- brazo derecho (saluda) -->
+              <g class="jota-brazo-saludo">
+                <path d="M256 280 Q298 262 306 214" fill="none" stroke="#141414" stroke-width="24" stroke-linecap="round"/>
+                <path d="M256 280 Q298 262 306 214" fill="none" stroke="#2A2722" stroke-width="24" stroke-linecap="round" opacity=".35"/>
+                <rect x="294" y="208" width="24" height="9" rx="3" fill="#FAF8F3"/>
+                <circle cx="306" cy="194" r="16" fill="#EBC9A0"/>
+                <path d="M292 190 Q288 180 294 176" fill="none" stroke="#D6AE84" stroke-width="5" stroke-linecap="round"/>
+              </g>
+
+              <!-- saco -->
+              <path d="M128 362 Q124 272 200 258 Q276 272 272 362 Z" fill="#141414"/>
+              <path d="M128 362 Q124 272 200 258 Q276 272 272 362 Z" fill="none" stroke="#2A2722" stroke-width="2"/>
+              <!-- camisa y solapas -->
+              <path d="M176 262 L200 322 L224 262 Z" fill="#FAF8F3"/>
+              <path d="M176 262 L200 322 L164 300 L170 268 Z" fill="#1F1D19"/>
+              <path d="M224 262 L200 322 L236 300 L230 268 Z" fill="#1F1D19"/>
+              <path d="M176 262 L200 322 M224 262 L200 322" stroke="#C9A85C" stroke-width="1.5" opacity=".6"/>
+              <!-- pañuelo y botones -->
+              <path d="M236 292 L254 290 L246 302 Z" fill="#C9A85C"/>
+              <circle cx="200" cy="336" r="3.5" fill="#C9A85C"/>
+              <circle cx="200" cy="352" r="3.5" fill="#C9A85C"/>
+
+              <!-- corbatín -->
+              <g class="jota-corbatin">
+                <path d="M200 274 L180 263 L180 285 Z" fill="#C9A85C"/>
+                <path d="M200 274 L220 263 L220 285 Z" fill="#C9A85C"/>
+                <circle cx="200" cy="274" r="5" fill="#8A6A2B"/>
+              </g>
+
+              <!-- brazo izquierdo con calculadora -->
+              <path d="M146 280 Q116 318 150 346" fill="none" stroke="#141414" stroke-width="24" stroke-linecap="round"/>
+              <g class="jota-calculadora">
+                <rect x="140" y="300" width="66" height="84" rx="9" fill="#C9A85C" transform="rotate(-8 173 342)"/>
+                <g transform="rotate(-8 173 342)">
+                  <rect x="148" y="308" width="50" height="20" rx="3" fill="#1C1A16"/>
+                  <text id="jota-pantalla" x="193" y="323" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#E4CF9A">52.374</text>
+                  <g fill="#8A6A2B">
+                    <rect x="149" y="335" width="12" height="9" rx="2"/><rect x="167" y="335" width="12" height="9" rx="2"/><rect x="185" y="335" width="12" height="9" rx="2"/>
+                    <rect x="149" y="349" width="12" height="9" rx="2"/><rect x="167" y="349" width="12" height="9" rx="2"/><rect x="185" y="349" width="12" height="9" rx="2"/>
+                    <rect x="149" y="363" width="12" height="9" rx="2"/><rect x="167" y="363" width="12" height="9" rx="2"/><rect x="185" y="363" width="12" height="9" rx="2" fill="#141414"/>
+                  </g>
+                </g>
+              </g>
+              <circle cx="148" cy="350" r="13" fill="#EBC9A0"/>
+
+              <!-- cuello -->
+              <rect x="188" y="236" width="24" height="28" rx="6" fill="#D6AE84"/>
+
+              <!-- cabeza -->
+              <g class="jota-cabeza">
+                <circle cx="118" cy="172" r="15" fill="#EBC9A0"/>
+                <circle cx="118" cy="172" r="7" fill="#D6AE84"/>
+                <circle cx="282" cy="172" r="15" fill="#EBC9A0"/>
+                <circle cx="282" cy="172" r="7" fill="#D6AE84"/>
+                <circle cx="200" cy="166" r="82" fill="#EBC9A0"/>
+
+                <!-- cabello -->
+                <path d="M120 156 Q112 80 200 76 Q290 78 281 156 Q274 120 246 108 Q222 126 176 116 Q140 118 120 156 Z" fill="#1C1A16"/>
+                <path d="M176 116 Q204 100 246 108" fill="none" stroke="#C9A85C" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+
+                <!-- cejas -->
+                <g class="jota-cejas">
+                  <path d="M152 140 Q168 130 186 138" fill="none" stroke="#1C1A16" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M214 138 Q232 130 248 140" fill="none" stroke="#1C1A16" stroke-width="6" stroke-linecap="round"/>
+                </g>
+
+                <!-- ojos -->
+                <g class="jota-ojos">
+                  <circle cx="170" cy="178" r="13" fill="#FFFFFF"/>
+                  <circle cx="230" cy="178" r="13" fill="#FFFFFF"/>
+                  <g class="jota-pupila" data-cx="170" data-cy="178">
+                    <circle cx="170" cy="178" r="7" fill="#141414"/>
+                    <circle cx="167.5" cy="175.5" r="2.2" fill="#FFFFFF"/>
+                  </g>
+                  <g class="jota-pupila" data-cx="230" data-cy="178">
+                    <circle cx="230" cy="178" r="7" fill="#141414"/>
+                    <circle cx="227.5" cy="175.5" r="2.2" fill="#FFFFFF"/>
+                  </g>
+                </g>
+
+                <!-- gafas doradas -->
+                <g fill="none" stroke="#C9A85C" stroke-width="4.5" stroke-linecap="round">
+                  <circle cx="170" cy="178" r="24" fill="rgba(255,255,255,.07)"/>
+                  <circle cx="230" cy="178" r="24" fill="rgba(255,255,255,.07)"/>
+                  <path d="M194 176 Q200 170 206 176"/>
+                  <path d="M146 172 L122 166 M254 172 L278 166"/>
+                </g>
+                <path d="M158 166 L166 160" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+                <path d="M218 166 L226 160" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+
+                <!-- nariz, mejillas y boca -->
+                <path d="M200 188 Q208 200 199 204" fill="none" stroke="#C99A75" stroke-width="3.5" stroke-linecap="round"/>
+                <ellipse cx="146" cy="208" rx="12" ry="7" fill="#E59B85" opacity=".5"/>
+                <ellipse cx="254" cy="208" rx="12" ry="7" fill="#E59B85" opacity=".5"/>
+                <path class="jota-sonrisa" d="M180 216 Q200 234 220 216" fill="none" stroke="#5A2A1C" stroke-width="4.5" stroke-linecap="round"/>
+                <path class="jota-boca-abierta" d="M181 214 Q200 246 219 214 Z" fill="#5A2A1C"/>
+              </g>
+            </g>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
 
-  <section aria-label="Indicadores" style="background: #141414; color: #FFFFFF; border-top: 1px solid #2A2722">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px">
-      <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A296">UVT 2026</span><span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 26px; color: #C9A85C">$52.374</span></div>
-      <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A296">Mora art. 635 · octubre</span><span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 26px; color: #C9A85C">26,59 % E.A.</span></div>
-      <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A296">Interés bancario corriente</span><span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 26px; color: #C9A85C">19,06 % E.A.</span></div>
-      <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A296">Próximo vencimiento</span><span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 26px; color: #C9A85C">26 oct · renta PN</span></div>
+  <section class="indicadores" aria-label="Indicadores">
+    <div class="contenedor">
+      <div class="indicador"><span>UVT 2026</span><span>$52.374</span></div>
+      <div class="indicador"><span>Mora art. 635 · octubre</span><span>26,59 % E.A.</span></div>
+      <div class="indicador"><span>Interés bancario corriente</span><span>19,06 % E.A.</span></div>
+      <div class="indicador"><span>Próximo vencimiento</span><span>26 oct · renta PN</span></div>
     </div>
   </section>
 
-  <section id="servicios" style="background: #FFFFFF">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 112px 32px; display: flex; flex-direction: column; gap: 56px">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px">
-        <div style="display: flex; flex-direction: column; gap: 12px">
-          <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #8A6A2B">Servicios</span>
-          <h2 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 500; font-size: 52px; line-height: 1.05">Lo que hacemos por usted</h2>
+  <section id="servicios" class="seccion">
+    <div class="contenedor">
+      <div class="seccion-cabecera revelar">
+        <div>
+          <span class="etiqueta">Servicios</span>
+          <h2 class="titulo-seccion">Lo que hacemos por usted</h2>
         </div>
-        <p style="margin: 0; max-width: 420px; color: #5E5A52">Cumplimiento fiscal, contable y laboral en Colombia, con soporte en doctrina DIAN y jurisprudencia.</p>
+        <p>Cumplimiento fiscal, contable y laboral en Colombia, con soporte en doctrina DIAN y jurisprudencia.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0; border-top: 1px solid #141414">
-        <article style="padding: 36px 32px 40px 0; border-bottom: 1px solid #E6E1D6; display: flex; flex-direction: column; gap: 12px">
-          <span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 13px; color: #8A6A2B">01</span>
-          <h3 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 30px">Asesoría tributaria</h3>
-          <p style="margin: 0; color: #5E5A52">Renta, IVA, retención en la fuente e ICA. Respuesta a requerimientos y defensa en procesos ante la DIAN y municipios.</p>
+      <div class="servicios-grid">
+        <article class="servicio revelar">
+          <span class="servicio-num">01</span>
+          <h3>Asesoría tributaria</h3>
+          <p>Renta, IVA, retención en la fuente e ICA. Respuesta a requerimientos y defensa en procesos ante la DIAN y municipios.</p>
         </article>
-        <article style="padding: 36px 32px 40px 0; border-bottom: 1px solid #E6E1D6; display: flex; flex-direction: column; gap: 12px">
-          <span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 13px; color: #8A6A2B">02</span>
-          <h3 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 30px">Contabilidad</h3>
-          <p style="margin: 0; color: #5E5A52">NIIF para pymes y marco del sector público. Estados financieros, conciliaciones y reportes periódicos.</p>
+        <article class="servicio revelar">
+          <span class="servicio-num">02</span>
+          <h3>Contabilidad</h3>
+          <p>NIIF para pymes y marco del sector público. Estados financieros, conciliaciones y reportes periódicos.</p>
         </article>
-        <article style="padding: 36px 32px 40px 0; border-bottom: 1px solid #E6E1D6; display: flex; flex-direction: column; gap: 12px">
-          <span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 13px; color: #8A6A2B">03</span>
-          <h3 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 30px">Nómina y seguridad social</h3>
-          <p style="margin: 0; color: #5E5A52">Liquidación de nómina, PILA, recobro de incapacidades y prestaciones sociales.</p>
+        <article class="servicio revelar">
+          <span class="servicio-num">03</span>
+          <h3>Nómina y seguridad social</h3>
+          <p>Liquidación de nómina, PILA, recobro de incapacidades y prestaciones sociales.</p>
         </article>
-        <article style="padding: 36px 32px 40px 0; border-bottom: 1px solid #E6E1D6; display: flex; flex-direction: column; gap: 12px">
-          <span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 13px; color: #8A6A2B">04</span>
-          <h3 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 30px">Información exógena</h3>
-          <p style="margin: 0; color: #5E5A52">Medios magnéticos y reportes a la DIAN, Supersociedades, DANE y entes de control.</p>
+        <article class="servicio revelar">
+          <span class="servicio-num">04</span>
+          <h3>Información exógena</h3>
+          <p>Medios magnéticos y reportes a la DIAN, Supersociedades, DANE y entes de control.</p>
         </article>
-        <article style="padding: 36px 32px 40px 0; border-bottom: 1px solid #E6E1D6; display: flex; flex-direction: column; gap: 12px">
-          <span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 13px; color: #8A6A2B">05</span>
-          <h3 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 30px">Cobro coactivo y procedimiento</h3>
-          <p style="margin: 0; color: #5E5A52">Excepciones, prescripción, acuerdos de pago y liquidación de intereses de mora.</p>
+        <article class="servicio revelar">
+          <span class="servicio-num">05</span>
+          <h3>Cobro coactivo y procedimiento</h3>
+          <p>Excepciones, prescripción, acuerdos de pago y liquidación de intereses de mora.</p>
         </article>
-        <article style="padding: 36px 32px 40px 0; border-bottom: 1px solid #E6E1D6; display: flex; flex-direction: column; gap: 12px">
-          <span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 13px; color: #8A6A2B">06</span>
-          <h3 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 30px">Consultoría financiera</h3>
-          <p style="margin: 0; color: #5E5A52">Flujos de caja, evaluación de proyectos y acompañamiento en decisiones de inversión.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="herramientas" style="background: #0E0E0E; color: #FFFFFF">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 112px 32px; display: flex; flex-direction: column; gap: 48px">
-      <div style="display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #C9A85C">Herramientas propias</span>
-        <h2 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 500; font-size: 52px; line-height: 1.05">Tecnología al servicio del criterio</h2>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px">
-        <article style="border: 1px solid #3A352B; padding: 44px; display: flex; flex-direction: column; gap: 18px">
-          <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A85C">Normograma anotado</span>
-          <h3 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 500; font-size: 40px">Estatuto IA</h3>
-          <p style="margin: 0; color: #CFCAC0">Estatuto Tributario y DUR 1625 de 2016 con conceptos DIAN, sentencias y anotaciones con cifras en UVT.</p>
-          <a href="https://estatuto.jjcontadoresasociados.com/" style="color: #C9A85C; font-weight: 700; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none">Consultar →</a>
-        </article>
-        <article style="border: 1px solid #3A352B; padding: 44px; display: flex; flex-direction: column; gap: 18px">
-          <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A85C">Boletín semanal</span>
-          <h3 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 500; font-size: 40px">Hermenéutica Tributaria y Administrativa</h3>
-          <p style="margin: 0; color: #CFCAC0">Fichas de sentencias del Consejo de Estado, doctrina DIAN, tasa de mora y vencimientos, cada lunes.</p>
-          <a href="https://boletin.jjcontadoresasociados.com/" style="color: #C9A85C; font-weight: 700; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none">Leer boletín →</a>
+        <article class="servicio revelar">
+          <span class="servicio-num">06</span>
+          <h3>Consultoría financiera</h3>
+          <p>Flujos de caja, evaluación de proyectos y acompañamiento en decisiones de inversión.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="boletin" style="background: #FFFFFF">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 112px 32px; display: flex; flex-direction: column; gap: 40px">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px">
-        <div style="display: flex; flex-direction: column; gap: 12px">
-          <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #8A6A2B">Boletín N.º 3 · 12 al 18 de octubre</span>
-          <h2 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 500; font-size: 52px; line-height: 1.05">Lo más reciente</h2>
+  <section id="herramientas" class="seccion oscuro">
+    <div class="contenedor">
+      <div class="seccion-cabecera revelar">
+        <div>
+          <span class="etiqueta">Herramientas propias</span>
+          <h2 class="titulo-seccion">Tecnología al servicio del <em>criterio</em></h2>
         </div>
-        <a href="https://boletin.jjcontadoresasociados.com/" style="font-weight: 700; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none">Edición completa →</a>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px">
-        <article style="border-top: 2px solid #C9A85C; padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
-          <span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 13px; color: #5E5A52">CE Secc. 4.ª · Exp. 28528</span>
-          <h3 style="margin: 0; font-family: 'EB Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.2">Notificación por aviso sin segundo envío si el correo vuelve con «no reside»</h3>
+      <div class="herramientas-grid">
+        <article class="herramienta revelar">
+          <span class="etiqueta">Normograma anotado</span>
+          <h3>Estatuto IA</h3>
+          <p>Estatuto Tributario y DUR 1625 de 2016 con conceptos DIAN, sentencias y anotaciones con cifras en UVT.</p>
+          <a href="https://estatuto.jjcontadoresasociados.com/" class="enlace-flecha">Consultar <span>→</span></a>
         </article>
-        <article style="border-top: 2px solid #C9A85C; padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
-          <span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 13px; color: #5E5A52">CE Secc. 4.ª · Exp. 30631</span>
-          <h3 style="margin: 0; font-family: 'EB Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.2">Firmeza de tres años y costos presuntos que no rescatan operaciones irreales</h3>
-        </article>
-        <article style="border-top: 2px solid #C9A85C; padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
-          <span style="font-family: 'EB Garamond', Georgia, serif; font-variant-numeric: lining-nums tabular-nums; font-size: 13px; color: #5E5A52">DIAN · 016671</span>
-          <h3 style="margin: 0; font-family: 'EB Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.2">Pérdidas en ETF del exterior: deducibles según lo que realmente se compró</h3>
+        <article class="herramienta revelar">
+          <span class="etiqueta">Boletín semanal</span>
+          <h3>Hermenéutica Tributaria y Administrativa</h3>
+          <p>Fichas de sentencias del Consejo de Estado, doctrina DIAN, tasa de mora y vencimientos, cada lunes.</p>
+          <a href="https://boletin.jjcontadoresasociados.com/" class="enlace-flecha">Leer boletín <span>→</span></a>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="contacto" style="background: #0E0E0E; color: #FFFFFF; border-top: 4px solid #C9A85C">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 104px 32px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+  <section id="boletin" class="seccion">
+    <div class="contenedor">
+      <div class="seccion-cabecera revelar">
+        <div>
+          <span class="etiqueta">Boletín N.º 3 · 12 al 18 de octubre</span>
+          <h2 class="titulo-seccion">Lo más reciente</h2>
+        </div>
+        <a href="https://boletin.jjcontadoresasociados.com/" class="enlace-flecha">Edición completa <span>→</span></a>
+      </div>
+      <div class="boletin-grid">
+        <article class="nota revelar">
+          <span>CE Secc. 4.ª · Exp. 28528</span>
+          <h3>Notificación por aviso sin segundo envío si el correo vuelve con «no reside»</h3>
+        </article>
+        <article class="nota revelar">
+          <span>CE Secc. 4.ª · Exp. 30631</span>
+          <h3>Firmeza de tres años y costos presuntos que no rescatan operaciones irreales</h3>
+        </article>
+        <article class="nota revelar">
+          <span>DIAN · 016671</span>
+          <h3>Pérdidas en ETF del exterior: deducibles según lo que realmente se compró</h3>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 32px">
-        <div style="display: flex; flex-direction: column; gap: 14px">
-          <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #C9A85C">Consulta profesional</span>
-          <h2 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 500; font-size: 46px; line-height: 1.1">Hablemos de sus <em style="color: #C9A85C; font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-weight: 400">obligaciones</em></h2>
-          <p style="margin: 0; color: #CFCAC0">Cuéntenos su caso; un contador de la firma le responde en máximo un día hábil.</p>
+  <section id="contacto" class="contacto oscuro">
+    <div class="contenedor">
+
+      <div class="contacto-info">
+        <div>
+          <span class="etiqueta">Consulta profesional</span>
+          <h2 class="titulo-seccion">Hablemos de sus <em>obligaciones</em></h2>
+          <p>Cuéntenos su caso; un contador de la firma le responde en máximo un día hábil.</p>
         </div>
 
-        <div style="display: flex; flex-direction: column; border-top: 1px solid #3A352B">
-          <a href="mailto:jjcontadores_asociados@hotmail.com" style="display: flex; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 1px solid #3A352B; text-decoration: none; color: #FFFFFF; min-height: 44px">
-            <span style="width: 44px; height: 44px; flex: none; border: 1px solid #C9A85C; display: flex; align-items: center; justify-content: center; color: #C9A85C"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 7l9 6 9-6"></path></svg></span>
-            <span style="display: flex; flex-direction: column; min-width: 0"><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A296">Correo</span><span style="font-size: 18px; overflow-wrap: anywhere">jjcontadores_asociados@hotmail.com</span></span>
+        <div class="canales">
+          <a href="mailto:jjcontadores_asociados@hotmail.com" class="canal">
+            <span class="canal-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 7l9 6 9-6"></path></svg></span>
+            <span class="canal-texto"><small>Correo</small><span>jjcontadores_asociados@hotmail.com</span></span>
           </a>
-          <a href="tel:+573052778792" style="display: flex; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 1px solid #3A352B; text-decoration: none; color: #FFFFFF; min-height: 44px">
-            <span style="width: 44px; height: 44px; flex: none; border: 1px solid #C9A85C; display: flex; align-items: center; justify-content: center; color: #C9A85C"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"></path></svg></span>
-            <span style="display: flex; flex-direction: column"><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A296">Teléfono</span><span style="font-size: 18px; font-variant-numeric: lining-nums">+57 305 277 8792</span></span>
+          <a href="tel:+573052778792" class="canal">
+            <span class="canal-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"></path></svg></span>
+            <span class="canal-texto"><small>Teléfono</small><span>+57 305 277 8792</span></span>
           </a>
-          <a href="https://wa.me/573052778792" style="display: flex; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 1px solid #3A352B; text-decoration: none; color: #FFFFFF; min-height: 44px">
-            <span style="width: 44px; height: 44px; flex: none; border: 1px solid #C9A85C; display: flex; align-items: center; justify-content: center; color: #C9A85C"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"></path><path d="M9 9.5c.5 2 2 3.5 4 4l1.2-1.2 1.8.8-.4 1.6c-3 .4-6.6-3.2-6.2-6.2l1.6-.4.8 1.8z"></path></svg></span>
-            <span style="display: flex; flex-direction: column"><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A296">WhatsApp</span><span style="font-size: 18px">Escríbanos directamente</span></span>
+          <a href="https://wa.me/573052778792" class="canal">
+            <span class="canal-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"></path><path d="M9 9.5c.5 2 2 3.5 4 4l1.2-1.2 1.8.8-.4 1.6c-3 .4-6.6-3.2-6.2-6.2l1.6-.4.8 1.8z"></path></svg></span>
+            <span class="canal-texto"><small>WhatsApp</small><span>Escríbanos directamente</span></span>
           </a>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 16px; font-size: 16px">
-          <span style="grid-column: 1 / -1; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A296; margin-bottom: 4px">Horario de atención</span>
-          <span>Lunes a viernes</span><span style="color: #CFCAC0; text-align: right">8:00 a. m. – 6:00 p. m.</span>
-          <span>Sábados</span><span style="color: #CFCAC0; text-align: right">8:00 a. m. – 12:00 m.</span>
+        <div class="horario">
+          <small>Horario de atención</small>
+          <span>Lunes a viernes</span><span>8:00 a. m. – 6:00 p. m.</span>
+          <span>Sábados</span><span>8:00 a. m. – 12:00 m.</span>
         </div>
 
-        <ol style="margin: 0; padding: 24px; list-style: none; border: 1px solid #3A352B; display: flex; flex-direction: column; gap: 14px">
-          <li style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8A296">Qué sigue después de enviar</li>
-          <li style="display: flex; gap: 14px; align-items: baseline"><span style="font-family: 'Cinzel', Georgia, serif; color: #C9A85C; font-size: 20px">I</span><span>Revisamos su solicitud y el tipo de obligación.</span></li>
-          <li style="display: flex; gap: 14px; align-items: baseline"><span style="font-family: 'Cinzel', Georgia, serif; color: #C9A85C; font-size: 20px">II</span><span>Le contactamos en máximo un día hábil.</span></li>
-          <li style="display: flex; gap: 14px; align-items: baseline"><span style="font-family: 'Cinzel', Georgia, serif; color: #C9A85C; font-size: 20px">III</span><span>Agendamos una reunión de diagnóstico.</span></li>
+        <ol class="pasos">
+          <li>Qué sigue después de enviar</li>
+          <li><b>I</b><span>Revisamos su solicitud y el tipo de obligación.</span></li>
+          <li><b>II</b><span>Le contactamos en máximo un día hábil.</span></li>
+          <li><b>III</b><span>Agendamos una reunión de diagnóstico.</span></li>
         </ol>
       </div>
 
-      <form id="consulta" aria-label="Solicitud de consulta" style="flex: 1.4 1 480px; min-width: 0; background: #FFFFFF; color: #141414; padding: 44px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; border-top: 4px solid #C9A85C">
-        <div style="display: flex; flex-direction: column; gap: 4px">
-          <h3 style="margin: 0; font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 26px">Solicitud de consulta</h3>
-          <p style="margin: 0; font-size: 15px; color: #5E5A52">Los campos marcados con * son obligatorios.</p>
+      <form id="consulta" class="formulario revelar" aria-label="Solicitud de consulta" novalidate>
+        <div>
+          <h3>Solicitud de consulta</h3>
+          <p>Los campos marcados con * son obligatorios.</p>
         </div>
 
-        <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 14px">
-          <legend style="padding: 0 0 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A6A2B">1 · Tipo de cliente *</legend>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px">
-            <label style="display: flex; align-items: center; gap: 10px; border: 1px solid #141414; background: #141414; color: #FFFFFF; padding: 12px 14px; min-height: 48px; box-sizing: border-box; cursor: pointer"><input type="radio" name="tipo" checked style="accent-color: #C9A85C; width: 18px; height: 18px">Persona natural</label>
-            <label style="display: flex; align-items: center; gap: 10px; border: 1px solid #D9D3C6; padding: 12px 14px; min-height: 48px; box-sizing: border-box; cursor: pointer"><input type="radio" name="tipo" style="accent-color: #8A6A2B; width: 18px; height: 18px">Empresa</label>
-            <label style="display: flex; align-items: center; gap: 10px; border: 1px solid #D9D3C6; padding: 12px 14px; min-height: 48px; box-sizing: border-box; cursor: pointer"><input type="radio" name="tipo" style="accent-color: #8A6A2B; width: 18px; height: 18px">Entidad pública</label>
+        <fieldset>
+          <legend>1 · Tipo de cliente *</legend>
+          <div class="opciones">
+            <label class="opcion"><input type="radio" name="tipo" value="Persona natural" checked>Persona natural</label>
+            <label class="opcion"><input type="radio" name="tipo" value="Empresa">Empresa</label>
+            <label class="opcion"><input type="radio" name="tipo" value="Entidad pública">Entidad pública</label>
           </div>
         </fieldset>
 
-        <fieldset style="margin: 0; padding: 0; border: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
-          <legend style="padding: 0 0 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A6A2B">2 · Sus datos</legend>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">Nombre o razón social *<input type="text" autocomplete="name" style="border: 1px solid #D9D3C6; background: #FFFFFF; font: inherit; font-weight: 400; font-size: 17px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; border-radius: 0"></label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">Cédula o NIT<input type="text" style="border: 1px solid #D9D3C6; background: #FFFFFF; font: inherit; font-weight: 400; font-size: 17px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; border-radius: 0"></label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">Correo electrónico *<input type="email" autocomplete="email" style="border: 1px solid #D9D3C6; background: #FFFFFF; font: inherit; font-weight: 400; font-size: 17px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; border-radius: 0"></label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">Celular *<input type="tel" autocomplete="tel" style="border: 1px solid #D9D3C6; background: #FFFFFF; font: inherit; font-weight: 400; font-size: 17px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; border-radius: 0"></label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">Ciudad<input type="text" style="border: 1px solid #D9D3C6; background: #FFFFFF; font: inherit; font-weight: 400; font-size: 17px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; border-radius: 0"></label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">Prefiere que lo contactemos por<select style="border: 1px solid #D9D3C6; background: #FFFFFF; font: inherit; font-weight: 400; font-size: 17px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; border-radius: 0"><option>WhatsApp</option><option>Llamada</option><option>Correo</option></select></label>
+        <fieldset>
+          <legend>2 · Sus datos</legend>
+          <div class="campos">
+            <label class="campo">Nombre o razón social *<input type="text" name="Nombre o razón social" autocomplete="name" required></label>
+            <label class="campo">Cédula o NIT<input type="text" name="Cédula o NIT"></label>
+            <label class="campo">Correo electrónico *<input type="email" name="Correo electrónico" autocomplete="email" required></label>
+            <label class="campo">Celular *<input type="tel" name="Celular" autocomplete="tel" required></label>
+            <label class="campo">Ciudad<input type="text" name="Ciudad"></label>
+            <label class="campo">Prefiere que lo contactemos por<select name="Contacto preferido"><option>WhatsApp</option><option>Llamada</option><option>Correo</option></select></label>
+          </div>
         </fieldset>
 
-        <fieldset style="margin: 0; padding: 0; border: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
-          <legend style="padding: 0 0 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A6A2B">3 · Su consulta</legend>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">Servicio *<select style="border: 1px solid #D9D3C6; background: #FFFFFF; font: inherit; font-weight: 400; font-size: 17px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; border-radius: 0"><option>Declaración de renta</option><option>Asesoría tributaria</option><option>Contabilidad</option><option>Nómina y seguridad social</option><option>Información exógena</option><option>Requerimiento o proceso DIAN</option><option>Cobro coactivo</option><option>Consultoría financiera</option></select></label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">¿Tiene un vencimiento próximo?<select style="border: 1px solid #D9D3C6; background: #FFFFFF; font: inherit; font-weight: 400; font-size: 17px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; border-radius: 0"><option>No, es una consulta general</option><option>Sí, en menos de 15 días</option><option>Sí, en este mes</option><option>Tengo un requerimiento con plazo</option></select></label>
-          <label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">Describa brevemente su caso *<textarea rows="4" style="border: 1px solid #D9D3C6; background: #FFFFFF; font: inherit; font-weight: 400; font-size: 17px; padding: 12px 14px; box-sizing: border-box; border-radius: 0; resize: vertical"></textarea></label>
+        <fieldset>
+          <legend>3 · Su consulta</legend>
+          <div class="campos">
+            <label class="campo">Servicio *<select name="Servicio"><option>Declaración de renta</option><option>Asesoría tributaria</option><option>Contabilidad</option><option>Nómina y seguridad social</option><option>Información exógena</option><option>Requerimiento o proceso DIAN</option><option>Cobro coactivo</option><option>Consultoría financiera</option></select></label>
+            <label class="campo">¿Tiene un vencimiento próximo?<select name="Vencimiento próximo"><option>No, es una consulta general</option><option>Sí, en menos de 15 días</option><option>Sí, en este mes</option><option>Tengo un requerimiento con plazo</option></select></label>
+            <label class="campo campo-ancho">Describa brevemente su caso *<textarea name="Caso" rows="4" required></textarea></label>
+          </div>
         </fieldset>
 
-        <label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: #3A3832"><input type="checkbox" style="accent-color: #8A6A2B; width: 20px; height: 20px; margin-top: 2px; flex: none">Autorizo el tratamiento de mis datos personales para atender esta solicitud, conforme a la Ley 1581 de 2012.</label>
+        <label class="autorizacion"><input type="checkbox" name="autorizacion" required>Autorizo el tratamiento de mis datos personales para atender esta solicitud, conforme a la Ley 1581 de 2012.</label>
 
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; border-top: 1px solid #E6E1D6; padding-top: 24px">
-          <button type="submit" style="background: #141414; color: #FFFFFF; border: 0; font: inherit; font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 15px; letter-spacing: 0.12em; padding: 16px 36px; border-radius: 0; cursor: pointer; min-height: 52px">Enviar solicitud</button>
-          <a href="https://wa.me/573052778792" style="font-size: 16px; font-weight: 600">o escríbanos por WhatsApp →</a>
+        <p class="form-error" id="form-error" role="alert"></p>
+
+        <div class="form-acciones">
+          <button type="submit" class="boton boton-negro">Enviar solicitud</button>
+          <a href="https://wa.me/573052778792">o escríbanos por WhatsApp →</a>
         </div>
       </form>
     </div>
   </section>
 
-  <footer style="background: #FFFFFF; border-top: 1px solid #E6E1D6">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 13px; color: #5E5A52">
-      <span>© 2026 JJ Contadores &amp; Asociados · <a href="mailto:jjcontadores_asociados@hotmail.com">jjcontadores_asociados@hotmail.com</a> · <a href="tel:+573052778792">305 277 8792</a></span>
-      <span style="display: flex; gap: 24px"><a href="#servicios">Servicios</a><a href="https://estatuto.jjcontadoresasociados.com/">Estatuto IA</a><a href="https://boletin.jjcontadoresasociados.com/">Boletín</a></span>
-    </div>
-  </footer>
-</div>
+</main>
 
+<footer class="pie">
+  <div class="contenedor">
+    <span>© 2026 JJ Contadores &amp; Asociados · <a href="mailto:jjcontadores_asociados@hotmail.com">jjcontadores_asociados@hotmail.com</a> · <a href="tel:+573052778792">305 277 8792</a></span>
+    <nav aria-label="Pie de página"><a href="#servicios">Servicios</a><a href="https://estatuto.jjcontadoresasociados.com/">Estatuto IA</a><a href="https://boletin.jjcontadoresasociados.com/">Boletín</a></nav>
+  </div>
+</footer>
 
-<script>
-document.getElementById('consulta').addEventListener('submit',function(e){
-  e.preventDefault();var f=e.target,v=[];
-  f.querySelectorAll('label').forEach(function(l){var i=l.querySelector('input,select,textarea');if(!i)return;
-    if(i.type==='radio'){if(i.checked)v.push('Tipo de cliente: '+l.textContent.trim());return}
-    if(i.type==='checkbox'){return}
-    var t=l.childNodes[0].textContent.replace('*','').trim();if(i.value)v.push(t+': '+i.value)});
-  var ok=f.querySelector('input[type=checkbox]');if(!ok.checked){alert('Debe autorizar el tratamiento de datos para enviar la solicitud.');return}
-  location.href='mailto:jjcontadores_asociados@hotmail.com?subject='+encodeURIComponent('Solicitud de consulta')+'&body='+encodeURIComponent(v.join('\n'));
-});
-</script>
+<script src="js/main.js" defer></script>
+<script src="js/mascota.js" defer></script>
 </body>
 </html>
