@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Liquidador de intereses de mora DIAN | JJ Contadores &amp; Asociados</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Calcule gratis los intereses moratorios de sus deudas tributarias con la DIAN (art. 635 ET): tasa de usura menos 2 puntos, días de mora, varias obligaciones y tabla de tasas actualizada.">
+<meta name="keywords" content="intereses de mora DIAN, liquidador intereses moratorios, tasa de usura, artículo 635 estatuto tributario, deudas tributarias, calculadora intereses DIAN">
+<meta name="author" content="JJ Contadores & Asociados">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="canonical" href="https://jjcontadoresasociados.com/liquidador-intereses-mora/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jjcontadoresasociados.com/liquidador-intereses-mora/">
+<meta property="og:title" content="Liquidador de intereses de mora DIAN | JJ Contadores & Asociados">
+<meta property="og:description" content="Calcule los intereses moratorios de sus deudas tributarias con la DIAN, con la tasa de usura vigente menos 2 puntos.">
+<meta property="og:locale" content="es_CO">
+<meta property="og:image" content="https://jjcontadoresasociados.com/assets/jj-logo.png">
+<meta property="og:site_name" content="JJ Contadores & Asociados">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Liquidador de intereses de mora DIAN",
+  "url": "https://jjcontadoresasociados.com/liquidador-intereses-mora/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "es-CO",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "COP" },
+  "provider": { "@type": "AccountingService", "name": "JJ Contadores & Asociados", "url": "https://jjcontadoresasociados.com" }
+}
+</script>
+
+<link rel="icon" href="../assets/jj-negro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap">
+<link rel="stylesheet" href="../css/styles.css?v=4">
+<link rel="stylesheet" href="../css/liquidador-mora.css?v=1">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor">
+    <a href="../" class="marca">
+      <img src="../assets/jj-negro.png" alt="">
+      <span class="marca-nombre">JJ Contadores <em>&amp; Asociados</em></span>
+    </a>
+    <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <nav id="menu" class="menu" aria-label="Principal">
+      <a href="../#servicios">Servicios</a>
+      <a href="../#herramientas">Herramientas</a>
+      <a href="../#boletin">Boletín</a>
+      <a href="../#contacto" class="boton boton-negro">Agendar consulta</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="liq-portada oscuro">
+    <div class="contenedor">
+      <a href="../#herramientas" class="liq-volver">← Herramientas</a>
+      <span class="etiqueta">Art. 634 y 635 del Estatuto Tributario</span>
+      <h1 class="titulo-seccion">Liquidador de intereses <em>de mora</em></h1>
+      <p>Calcule los intereses moratorios de obligaciones con la DIAN con interés simple diario: capital × tasa diaria × días de mora. La tasa es la de usura certificada por la Superfinanciera para consumo y ordinario, menos dos puntos.</p>
+    </div>
+  </section>
+
+  <section class="liq-cuerpo">
+    <div class="contenedor liq-grid">
+      <div class="liq-columna">
+
+        <section class="liq-bloque" aria-labelledby="h-datos">
+          <div class="liq-bloque-cab">
+            <span class="liq-paso">I</span>
+            <div>
+              <h2 id="h-datos">Obligaciones en mora</h2>
+              <p>Valor del impuesto sin sanciones. Agregue una fila por cada obligación que vaya a pagar en la misma fecha.</p>
+            </div>
+          </div>
+          <div class="liq-tabla-caja">
+            <table class="liq-tabla" id="obl">
+              <thead><tr><th>Concepto / período</th><th class="n">Valor en mora</th><th>Vencimiento</th><th class="n">Días</th><th class="n">Intereses</th><th><span class="sr">Quitar</span></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="liq-fila">
+            <button id="add" type="button" class="liq-boton-linea">+ Agregar obligación</button>
+            <span class="liq-nota">Las dos filas iniciales son un ejemplo. Reemplácelas por sus datos.</span>
+          </div>
+        </section>
+
+        <section class="liq-bloque" aria-labelledby="h-pago">
+          <div class="liq-bloque-cab">
+            <span class="liq-paso">II</span>
+            <div><h2 id="h-pago">Fecha de pago y criterio</h2></div>
+          </div>
+          <div class="liq-fila">
+            <label class="liq-campo" for="fpago">Fecha en que se hará el pago<input type="date" id="fpago"></label>
+            <label class="liq-campo" for="redondeo">Redondeo de intereses
+              <select id="redondeo">
+                <option value="up">Múltiplo de mil superior</option>
+                <option value="near">Múltiplo de mil más cercano</option>
+                <option value="none">Sin redondeo</option>
+              </select>
+            </label>
+          </div>
+          <div class="opciones liq-metodos" role="radiogroup" aria-label="Criterio de tasa">
+            <label class="opcion"><input type="radio" name="metodo" id="m-unica" value="unica" checked><span><b>Tasa vigente a la fecha de pago</b><small>Una sola tasa para todos los días de mora. Criterio DIAN, Concepto 415 de 2021 (respuesta 6).</small></span></label>
+            <label class="opcion"><input type="radio" name="metodo" id="m-mes" value="mes"><span><b>Tasa de cada mes de mora</b><small>Cada tramo con la tasa vigente en ese mes. Úselo como comparativo o en auditoría.</small></span></label>
+          </div>
+          <div id="alerts" class="liq-alertas"></div>
+        </section>
+
+        <section class="liq-bloque" aria-labelledby="h-det">
+          <div class="liq-bloque-cab">
+            <span class="liq-paso">III</span>
+            <div><h2 id="h-det">Detalle de la liquidación</h2></div>
+          </div>
+          <div id="detalle" class="liq-detalle"></div>
+        </section>
+      </div>
+
+      <aside class="liq-recibo" aria-live="polite">
+        <div class="liq-recibo-cab">
+          <span class="etiqueta">Total a pagar</span>
+          <strong id="r-total">$0</strong>
+        </div>
+        <dl>
+          <dt>Capital en mora</dt><dd id="r-cap">$0</dd>
+          <dt>Intereses de mora</dt><dd id="r-int">$0</dd>
+          <div class="liq-sep"></div>
+          <dt>Fecha de pago</dt><dd id="r-fecha">—</dd>
+          <dt>Tasa de usura</dt><dd id="r-usura">—</dd>
+          <dt>Tasa moratoria (usura − 2)</dt><dd id="r-tm">—</dd>
+          <dt>Tasa diaria</dt><dd id="r-td">—</dd>
+          <dt>Resolución</dt><dd id="r-res" class="liq-res">—</dd>
+        </dl>
+        <div class="liq-recibo-pie">
+          <button class="boton boton-oro" id="copiar" type="button">Copiar liquidación</button>
+          <p class="liq-aviso" id="toast" role="status"></p>
+          <textarea id="copytxt" hidden readonly aria-label="Texto de la liquidación"></textarea>
+          <a href="../#contacto" class="enlace-flecha">¿Necesita un acuerdo de pago con la DIAN? <span>→</span></a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="contenedor liq-anexos">
+      <details id="tasas" class="liq-desplegable">
+        <summary>Tabla de tasas de usura (octubre 2014 – noviembre 2026)</summary>
+        <div class="liq-desplegable-cuerpo">
+          <p class="liq-nota">Tasa efectiva anual certificada por la Superfinanciera para crédito de consumo y ordinario. Si necesita un mes que aún no aparece, agréguelo aquí; queda guardado en este navegador.</p>
+          <div class="liq-fila">
+            <label class="liq-campo" for="t-mes">Mes<input type="month" id="t-mes"></label>
+            <label class="liq-campo" for="t-usura">Tasa de usura (%)<input type="text" inputmode="decimal" id="t-usura" class="num" placeholder="28,34"></label>
+            <label class="liq-campo liq-campo-ancho" for="t-res">Resolución<input type="text" id="t-res" placeholder="Resolución ___ de 2026"></label>
+            <button id="t-add" type="button" class="liq-boton-linea">Guardar tasa</button>
+          </div>
+          <p class="liq-aviso" id="t-toast" role="status"></p>
+          <div class="liq-tabla-caja liq-tasas">
+            <table class="liq-tabla"><thead><tr><th>Desde</th><th>Hasta</th><th class="n">Usura E.A.</th><th class="n">Moratoria</th><th class="n">Diaria</th><th>Resolución</th><th><span class="sr">Quitar</span></th></tr></thead><tbody id="t-body"></tbody></table>
+          </div>
+        </div>
+      </details>
+
+      <details class="liq-desplegable">
+        <summary>Base legal y criterios del cálculo</summary>
+        <div class="liq-desplegable-cuerpo liq-texto">
+          <p><strong>Fórmula.</strong> Artículo 635 del ET, con el parágrafo de la Ley 1819 de 2016 y la reducción de dos puntos de la Ley 2010 de 2019:</p>
+          <div class="liq-formula">Intereses = K × T × t<br>K = impuesto en mora, sin sanciones<br>T = (tasa de usura − 2 puntos) ÷ 365<br>t = días calendario de mora</div>
+          <p><strong>Días de mora.</strong> Se cuentan desde el día siguiente al vencimiento hasta el día del pago, inclusive.</p>
+          <p><strong>Tasa única.</strong> La DIAN, en el Concepto 415 de noviembre 5 de 2021 (respuesta 6), indicó que se usa la tasa vigente al momento del pago y no la de cada mes en que se causó la mora. Es el criterio por defecto.</p>
+          <p><strong>Tasa mes a mes.</strong> Se incluye como comparativo. Aplica a cada tramo la tasa de usura de ese mes menos 2 puntos.</p>
+          <p><strong>Ley 2277 de 2022.</strong> Las tasas reducidas de los artículos 91 (50 %) y 93 (40 %) vencieron el 30 de junio de 2023 y no se incluyen.</p>
+          <p><strong>Revise en cada caso</strong> la suspensión de intereses después de dos años de admitida la demanda ante lo contencioso administrativo (parágrafo del art. 634 ET), la prescripción de la acción de cobro a los cinco años (art. 817 ET) y la firmeza de las declaraciones (art. 714 ET y siguientes).</p>
+          <p class="liq-nota">Herramienta de apoyo. Verifique las tasas en las resoluciones de la Superfinanciera antes de pagar. Para casos con sanciones, acuerdos de pago o procesos de cobro coactivo, <a href="../#contacto">agende una consulta</a>.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <span>© 2026 JJ Contadores &amp; Asociados · <a href="mailto:jjcontadores_asociados@hotmail.com">jjcontadores_asociados@hotmail.com</a> · <a href="tel:+573052778792">305 277 8792</a></span>
+    <nav aria-label="Pie de página"><a href="../#servicios">Servicios</a><a href="https://estatuto.jjcontadoresasociados.com/">Estatuto IA</a><a href="https://boletin.jjcontadoresasociados.com/">Boletín</a></nav>
+  </div>
+</footer>
+
+<script src="../js/main.js?v=4" defer></script>
+<script src="../js/liquidador-mora.js?v=1" defer></script>
+</body>
+</html>
