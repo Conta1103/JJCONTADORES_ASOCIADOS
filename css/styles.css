@@ -371,7 +371,7 @@ p { margin: 0; }
 /* ---------- Herramientas ---------- */
 .herramientas-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 .herramienta {
@@ -692,6 +692,7 @@ p { margin: 0; }
   .servicio:nth-child(3n) { border-right: 1px solid var(--linea); }
   .servicio:nth-child(2n) { border-right: 0; }
   .boletin-grid { grid-template-columns: 1fr; gap: 24px; }
+  .herramientas-grid { grid-template-columns: 1fr; }
   .contacto .contenedor { grid-template-columns: 1fr; }
   .indicadores .contenedor { grid-template-columns: repeat(2, 1fr); }
   .indicador:nth-child(3) { border-left: 0; padding-left: 0; }
